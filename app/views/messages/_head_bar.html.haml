@@ -1,0 +1,34 @@
+.header-list
+  .header-bar
+    .header-bar-name
+      Carve life
+    .header-logout-btn
+      .logout-icon
+        = icon('fas', 'sign-out-alt', class: 'out-icon')
+      .logout-btn
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn'
+  .header-left
+    .talk-btn-menber
+      .setting-btn 
+        = icon('fas', 'user', class: 'user-icon')
+      .name
+        = link_to edit_user_path(current_user), class: "name-btn" do
+          = current_user.name
+      
+    .contents-list
+      .talk-content
+        = icon('fas', 'comment-dots', class: 'talk-icon')
+        = link_to  new_group_path , class: "talk-btn-list" do
+          トーク
+      .group-list-messages
+        - current_user.groups.each do |group|
+          .group
+            = link_to group_messages_path(group) do
+              .group-name
+                = group.name
+      .pict-list
+        = icon('fas','images', class: 'pict-icon')
+        = link_to "#", class: "photo-submission " do
+          写真投稿
+  .header-right
+    .calender-name
