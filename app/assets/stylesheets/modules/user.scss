@@ -3,12 +3,12 @@
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: aqua;
+    
     border: 1px solid #ddd;
     border-radius: 5px;
-
+    background-color: beige;
     .account-page__inner--left, .account-page__inner--right {
-      float: left;
+     margin:0 auto;
       width: 50%;
     }
     &:after {
@@ -20,11 +20,12 @@
 
   .account-page__header {
     h2 {
-      margin-top:25px;
+      margin-top:40px;
       letter-spacing: 5px;
       font-size: 40px;
       font-weight: 200;
       font-family: cursive;
+      margin-bottom:40px;
 
       &:after {
         content: '';
@@ -34,21 +35,50 @@
       }
     }
     .btn {
-      margin-top: 20px;
+      width:85px;
+      height:35px;
       color: #fff;
-      background-color:aqua;
-      font-size: 25px;
+      background-color:#cd4545;
+      font-size: 15px;
       text-decoration: none;
       font-family: cursive;
+      float:right;
+      margin:0 auto;
+      margin-bottom:20px;
+      line-height:35px;
+      border-radius: 10px;
+      padding-left:6px;
+    }
+    .logbtn{
+      width:85px;
+      height:35px;
+      color: #fff;
+      background-color:#cd4545;
+      font-size: 15px;
+      text-decoration: none;
+      font-family: cursive;
+      float:right;
+      margin:0 auto;
+      margin-bottom:20px;
+      line-height:35px;
+      border-radius: 10px;
+      padding-left:15px;
     }
     .top-btn{
-      
+      width:140px;
+      height:35px;
       display:black;
-      font-size:25px;
+      font-size:15px;
       color: #fff;
       text-decoration: none;
-      font-family: cursive;
+      font-family: monospace;
       letter-spacing: 5px;
+      float:right;
+      background-color:#cd4545;
+      margin-bottom:15px;
+      line-height:35px;
+      border-radius: 10px;
+      padding-left:14px;
     }
   }
 
@@ -56,11 +86,11 @@
     margin-bottom: 20px;
 
     .field-label {
-      padding: 10px 0;
+      padding: 5px 0;
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
-      font-family: cursive;
+      font-family: monospace;
 
       i {
         font-size: 11px;
@@ -73,30 +103,32 @@
         width: 100%;
         padding: 10px;
         letter-spacing: 1px;
-        font-family: cursive;
+        font-family: monospace;
+        border-radius: 5px;
+        border:2px solid gray;
       }
     }
   }
 
   .submit-btn {
-    display: inline-block;
+    display:block;
     height: 50px;
-    padding: 0 30px;
+    width:100%;
     line-height: 50px;
     letter-spacing: 1px;
     text-align: center;
-    font-family: cursive;
+    font-family: monospace;
     color: #fff;
-    font-size:16px;
-    
-    
+    font-size:20px;
+    border:1px solid white;
+    border-radius: 40px; 
   }
 
   input[type='submit'] {
     float: left;
     margin-top: 20px;
     color: #fff;
-    background-color: aqua;
+    background-color: #cd4545;
   }
 
   .field-label {

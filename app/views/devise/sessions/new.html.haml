@@ -1,7 +1,6 @@
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Login
       = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -17,4 +16,4 @@
             .field-input
               = f.password_field :password, autocomplete: "off"
           .actions
-            = f.submit "Login", class: 'submit-btn'
+            = f.submit "ログイン", class: 'submit-btn'

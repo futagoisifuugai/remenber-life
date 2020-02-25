@@ -1,8 +1,7 @@
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Edit Account
-      = link_to "toppage", :back, class: 'top-btn'
+      = link_to "トップページ", :back, class: 'top-btn'
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
         .field
@@ -16,4 +15,4 @@
           .field-input
             = f.email_field :email
         .actions
-          = f.submit "Update", class: 'submit-btn'
+          = f.submit "変更", class: 'submit-btn'
