@@ -15,7 +15,7 @@
           = link_to root_path , class: "talk-btn-list" do
             トップページ
   .tweet-contents 
-    - @tweetss.each do |tweet|
+    - @tweet.each do |tweet|
       .contents-post-list 
         .contents-posts
           .tweet-text-title1
@@ -27,5 +27,5 @@
           .tweet-text2
             = simple_format(tweet.text)
     .page
-      = paginate @tweets
+      = paginate @tweet
       

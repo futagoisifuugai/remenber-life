@@ -2,9 +2,8 @@ class UsersController < ApplicationController
 
 
   def show
-    @name = current_user.name
-    @tweetss = current_user.tweets
-    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(3)
+    user = User.find(params[:id])
+    @tweet = user.tweets.page(params[:page]).per(3).order("created_at DESC")
   end
 
   def edit

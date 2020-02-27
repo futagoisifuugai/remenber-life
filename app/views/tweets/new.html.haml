@@ -1,7 +1,7 @@
 .wrapper
   .header-bar
     .header-bar-name
-      Carve life
+      write a blog
     .header-logout-btn-lists
       .header-logout-top
         .logout-top-icon-btn
@@ -22,9 +22,9 @@
         = form_for @tweet do |f|
           .input-contents
             .text-input-label
-              = f.label :title, "タイトル"
+              = f.label :title, "名前:タイトル"
             .field-input
-              = f.text_field :title
+              = f.text_field :title ,placeholder: '例：山田：猫の飼い方'
           .input-contents-area
             .text-input-label
               = f.label :text, "内容"
