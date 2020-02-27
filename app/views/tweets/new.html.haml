@@ -1,0 +1,35 @@
+.wrapper
+  .header-bar
+    .header-bar-name
+      Carve life
+    .header-logout-btn-lists
+      .header-logout-top
+        .logout-top-icon-btn
+          = icon('fas', 'sign-out-alt', class: 'top-logout-icon')
+        .logout-btn-btn
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn-top'
+      .header-top-page
+        .top-icon
+          = icon('fas', 'sign-out-alt', class: 'toppage-icon')
+        .top-btn
+          = link_to root_path , class: "talk-btn-list" do
+            トップページ 
+  .tweets-bar
+    .vlog-lists
+      .vlog-form
+        ブログ
+      .vlog-form-input
+        = form_for @tweet do |f|
+          .input-contents
+            .text-input-label
+              = f.label :title, "タイトル"
+            .field-input
+              = f.text_field :title
+          .input-contents-area
+            .text-input-label
+              = f.label :text, "内容"
+            .field-input
+              = f.text_area :text,rows:25 ,cols:73
+          .submit-contents
+            .actions
+              = f.submit "投稿" ,class:"toukou-btn-btn"
