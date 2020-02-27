@@ -27,9 +27,14 @@
               .group-name
                 = group.name
       .pict-list
-        = icon('fas','images', class: 'pict-icon')
-        = link_to "#", class: "photo-submission " do
-          写真投稿
+        = icon('fas','book', class: 'pict-icon')
+        = link_to new_tweet_path , class: "photo-submission " do
+          ブログ
+      .pict-tweet
+        = icon('fas','book-open', class: 'vlog-icon')
+        = link_to tweets_path , class: "photo-submission " do
+          ブログ一覧
+
   .header-right
     .calender-name
       #calendar
