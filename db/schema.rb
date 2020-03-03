@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200226084537) do
+ActiveRecord::Schema.define(version: 20200301173239) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 20200226084537) do
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
+  create_table "picts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "text"
+    t.text     "image1",     limit: 65535
+    t.text     "image2",     limit: 65535
+    t.text     "image3",     limit: 65535
+    t.text     "image4",     limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_picts_on_user_id", using: :btree
+  end
+
   create_table "tweets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "text"
@@ -75,5 +88,6 @@ ActiveRecord::Schema.define(version: 20200226084537) do
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
+  add_foreign_key "picts", "users"
   add_foreign_key "tweets", "users"
 end

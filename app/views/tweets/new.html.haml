@@ -1,13 +1,13 @@
 .wrapper
   .header-bar
     .header-bar-name
-      write a blog
+      Write a blog
     .header-logout-btn-lists
       .header-logout-top
         .logout-top-icon-btn
           = icon('fas', 'sign-out-alt', class: 'top-logout-icon')
         .logout-btn-btn
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn-top'
+          = link_to "マイページ", user_path(current_user.id) ,class: 'my-page'
       .header-top-page
         .top-icon
           = icon('fas', 'sign-out-alt', class: 'toppage-icon')

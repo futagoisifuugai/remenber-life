@@ -1,0 +1,15 @@
+.wrapper 
+  .pict-header
+    .pict-header-name
+      Photo
+  .pict-main-contents
+    .create-contents
+      .top-page-link-btn
+        = link_to root_path , class: "talk-btn-list" do
+          トップページ 
+      .top-vlog-link-btn
+        = link_to picts_path , class: "talk-btn-list" do
+          写真一覧
+      .top-my-link-btn
+        = link_to pict_path(current_user.id), class: "talk-btn-lists" do
+          マイページ

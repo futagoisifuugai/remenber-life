@@ -1,17 +1,17 @@
 .main-talk-list
+  .name
+    = link_to edit_group_path(@group), class: "edit-group-path" do
+      = @group.name
   .main-talk-message
     .main-group-name
-      .name
-        = link_to edit_group_path(@group), class: "edit-group-path" do
-          = @group.name
     .messages
       = render @messages
     .message-form-input
       .form
         = form_for [@group, @message] do |f|
           .input-box
-            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            = f.text_field :content, class: 'form__message', placeholder: 'メッセージ入力'
             = f.label :image, class: 'form__mask__image' do
               = icon('fas', 'image', class: 'icon')
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'submit-btn'
+          = f.submit '送信', class: 'submit-btn'

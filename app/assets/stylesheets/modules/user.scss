@@ -3,11 +3,10 @@
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    
   
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: beige;
+    background-color: azure;
     .account-page__inner--left, .account-page__inner--right {
      margin:0 auto;
       width: 50%;
@@ -38,8 +37,8 @@
     .btn {
       width:85px;
       height:35px;
-      color: #fff;
-      background-color:#cd4545;
+      color:#B0C4DE;
+      background-color:azure;
       font-size: 15px;
       text-decoration: none;
       font-family: cursive;
@@ -49,12 +48,13 @@
       line-height:35px;
       border-radius: 10px;
       padding-left:6px;
+      border: 1px solid azure;
     }
     .logbtn{
       width:85px;
       height:35px;
-      color: #fff;
-      background-color:#cd4545;
+      color:#B0C4DE;
+      background-color:azure;
       font-size: 15px;
       text-decoration: none;
       font-family: cursive;
@@ -70,12 +70,12 @@
       height:35px;
       display:black;
       font-size:15px;
-      color: #fff;
+      color:#B0C4DE;
       text-decoration: none;
       font-family: monospace;
       letter-spacing: 5px;
       float:right;
-      background-color:#cd4545;
+      background-color:azure;
       margin-bottom:15px;
       line-height:35px;
       border-radius: 10px;
@@ -119,9 +119,9 @@
     letter-spacing: 1px;
     text-align: center;
     font-family: monospace;
-    color: beige;
+    color:#B0C4DE;
     font-size:20px;
-    border:1px solid white;
+    border:1px solid azure;
     border-radius: 40px; 
   }
   .submit-btn-loguin{
@@ -130,7 +130,7 @@
     height: 50px;
     font-family: monospace;
     font-size:20px;
-    border:1px solid beige;
+    border:1px solid azure;
     border-radius: 40px; 
     line-height: 50px;
     letter-spacing: 1px;
@@ -139,14 +139,14 @@
 
   input[type='submit'] {
     margin-top: 20px;
-    color: #fff;
-    background-color: #cd4545;
+    color:#B0C4DE;
+    background-color:azure;
   }
 
   .field-label {
     .field_with_errors {
       display: inline-block;
-      color: #d65f4c;
+      color:#B0C4DE;
       font-weight: 400;
     }
   }
@@ -163,7 +163,7 @@
         right: 0;
         bottom: 0;
         width: 5px;
-        background-color: #d65f4c;
+        background-color: azure;
       }
     }
   }
@@ -177,7 +177,7 @@
 
   h2 {
     margin-bottom: 10px;
-    color: #d65f4c;
+    color:#B0C4DE;
     font-size: 14px;
   }
 

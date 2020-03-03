@@ -1,0 +1,42 @@
+.wrapper
+  .pict-header
+    .pict-header-name
+      Photo
+    .pict-header-right
+      .header-top-page
+        .top-icon
+          = icon('fas', 'sign-out-alt', class: 'toppage-icon')
+        .top-btn
+          = link_to root_path , class: "talk-btn-list" do
+            トップページ
+      .header-logout-top
+        .logout-top-icon-btn
+          = icon('fas', 'sign-out-alt', class: 'top-logout-icon')
+        .logout-btn-btn
+          = link_to "マイページ", pict_path(current_user.id) ,class: 'my-page'
+  .pict-cpntents
+    - @picts.each do |pict|
+      .contents-pict-list
+        .pict-tweet-pict
+          .pict-tweet-title
+            .nickname
+              名前:
+              .nickname-name
+                = pict.name
+            .pict-title
+              思い出
+            .pict-text
+              = pict.text
+          .alubam-list
+            .pict-image1
+              = image_tag (pict.image1), class:"image" ,size: "220x147"
+            .pict-image1
+              = image_tag (pict.image2), class:"image" ,size: "220x147"
+            .pict-image1
+              = image_tag (pict.image3), class:"image" ,size: "220x147"
+            .pict-image1
+              = image_tag (pict.image4), class:"image" ,size: "220x147"
+    .page
+      = paginate @picts
+      
+      

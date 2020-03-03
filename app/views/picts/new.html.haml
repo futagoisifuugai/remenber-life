@@ -1,0 +1,51 @@
+.wrapper
+  .pict-header
+    .pict-header-name    
+      Photo submission
+    .pict-header-right
+      .header-top-page
+        .top-icon
+          = icon('fas', 'sign-out-alt', class: 'toppage-icon')
+        .top-btn
+          = link_to root_path , class: "talk-btn-list" do
+            トップページ
+      .header-logout-top
+        .logout-top-icon-btn
+          = icon('fas', 'sign-out-alt', class: 'top-logout-icon')
+        .logout-btn-btn
+          = link_to "マイページ", pict_path(current_user.id) ,class: 'my-page'
+
+  .pict-submission
+    .pict-submission-list
+      .pict-form
+        写真投稿
+      .pict-form-submission
+        = form_for @pict do |f|
+          .pict-input-contents
+            .text-input-label
+              = f.label :name, "ニックネーム"
+            .field-inputt
+              = f.text_field :name ,placeholder: 'ニックネーム'
+          .pict-input-contents
+            .text-pict-label
+              = f.label :title, "タイトル：思い出"
+            .field-input
+              = f.text_area :text,rows:10,cols:45
+          .input-contents-picts
+            .text-input-label
+              = f.label :pict, "写真"
+            .pict-you
+              .field-input
+                = f.text_field :image1,placeholder: '写真 URL' 
+              .field-input
+                = f.text_field :image2,placeholder: '写真 URL'
+              .field-input
+                = f.text_field :image3,placeholder: '写真 URL'
+              .field-input
+                = f.text_field :image4,placeholder: '写真 URL'
+          .submit-contentsss
+            .actionss
+              = f.submit "投稿" ,class:"toukou-btn-btns"
+
+
+

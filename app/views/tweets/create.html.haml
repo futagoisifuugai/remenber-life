@@ -6,3 +6,7 @@
     .top-vlog-link-btn
       = link_to tweets_path , class: "talk-btn-list" do
         ブログ一覧
+    .top-my-link-btn
+      = link_to user_path(current_user.id), class: "talk-btn-lists" do
+        マイページ
+

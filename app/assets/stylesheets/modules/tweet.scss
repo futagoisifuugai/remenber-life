@@ -1,11 +1,15 @@
+.wrapper{
+  background-image: url('/assets/sia.jpg');
+  background-size:100% 100%;
+}
 .header-bar{
-  height:120px;
+  height:140px;
   width:100%;
   display: flex;
   justify-content: space-between;
-  background-color: #cd5c5c;
+  border-bottom: 1px solid gray;
   .header-bar-name{
-    color:beige;
+    color:#B0C4DE;
     font-size: 50px;
     font-family: serif;
     line-height: 120px;
@@ -30,18 +34,19 @@
           display:inline-block;
           line-height: 60px;
           font-size:20px;
+          color:black;
         }
       }
       .logout-btn-btn{
         font-size:20px;
         padding-left:38px;
         line-height:60px;
-        .logout-btn-top{
+        .my-page{
           display:block;
           text-decoration: none;
-          color:beige;
+          color:#B0C4DE;
           font-family: arial;
-          background-color: #cd5c5c;
+          height:0;
         }
       }
       .blog-you-name{
@@ -49,7 +54,7 @@
         padding-left:40px;
         line-height:60px;
         letter-spacing: 4px;
-        color: beige;
+        color:#B0C4DE;
         font-family: arial;
       }
       .blog-user-icon{
@@ -57,15 +62,16 @@
         text-decoration: none;
         display:inline-block;
         line-height: 30px;
-        font-size:25px;
+        font-size:20px;
+        color:black;
       }
-      .my-page{
+      .talk-btn-list{
         font-size:20px;
         font-family: arial;
         display: inline-block;
         text-decoration: none;
-        color: beige;
-        background-color: #cd5c5c;
+        color:#B0C4DE;
+        height:0;
       }
     }
     .header-top-page{
@@ -80,6 +86,7 @@
           display:inline-block;
           line-height: 30px;
           font-size:20px;
+          color:black;
         }
       }
       .top-btn{
@@ -90,9 +97,9 @@
         .talk-btn-list{
           display:block;
           text-decoration: none;
-          color:beige;
+          color:#B0C4DE;
           font-family: arial;
-          background-color: #cd5c5c;
+          height:0;
         }
       }
     }
@@ -100,17 +107,18 @@
 }
 .tweet-contents{
   width:100%;
-  height:calc(100vh - 120px);
-  background-color: beige;
+  height:calc(100vh - 140px);
   display: flex;
   position: relative;
   .contents-post-list{
-    width:510px;
-    height:600px;
-    background-color: #cd5c5c;
-    margin:120px 10px 0  10px;
-    border-radius: 10px;
+    width:520px;
+    height:550px;
+    background-color: azure;
+    margin:120px 10px 0  10px; 
     display: flex;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: cadetblue;
     .contents-posts{
       width:210px;
       height:600px;
@@ -118,14 +126,13 @@
       .tweet-text-title1{
         width:200px;
         height:30px;
-        background-color: #cd5c5c;
         border-radius:3px;
         font-size: 16px;
         line-height:30px;
         font-family: monospace;
-        margin-left:8px;
-        margin-top: 50px;
-        color: beige;
+        margin-left:12px;
+        margin-top: 25px;
+        color:#B0C4DE;
         
       }
       .tweet-text1{
@@ -134,7 +141,7 @@
         background-color: white;
         font-family: monospace;
         border-radius:6px;
-        margin-left:8px;
+        margin-left:12px;
         margin-bottom:40px;
         padding-top:10px;
       }
@@ -142,13 +149,12 @@
       .tweet-text-title2{
         width:200px;
         height:30px;
-        background-color: #cd5c5c;
         border-radius:3px;
         font-size: 16px;
         line-height:30px;
         font-family: monospace;
-        margin-left:8px;
-        color: beige;
+        margin-left:12px;
+        color:#B0C4DE;
       }
         .tweet-text2{
           width:494px;
@@ -156,56 +162,67 @@
           background-color: white;
           font-family: monospace;
           border-radius:6px;
-          margin-left:8px;
+          margin-left:12px;
         }
      }
   }
   .page{
-    background-color: beige;
     position: absolute;
-    width:50px;
-    height:530px;
-    top:150px;
-    right:25px;
+    width:550px;
+    height:40px;
+    top:730px;
+    right:0px;
     text-align: center;
+    color:white;
+    .pagination{
+      display: flex;
+      height:0;
+      line-height: 30px;
+      .page-link{
+        color:white;
+        height:0;
+        padding-right:5px;
+        text-decoration: none;
+        font-size:18px;
+      }
+    }
   }
 }
 .tweets-bar{
   width:100%;
-  height:calc(100% - 120px);
-  background-color: beige;
+  height:calc(100% - 140px);
   position: relative;
   .vlog-lists{
     width:800px;
     height:750px;
-    background-color: #cd5c5c;
+    background-color: cadetblue;
     position: absolute;
     top:0;
     right:0;
     left:0;
     bottom:0;
     margin:auto;
+    border-radius: 40px;
+    border: 1px solid gray;
     .vlog-form{
       width:250px;
       height:50px;
       margin-left:275px;
       line-height:50px;
       font-size:18px;
-      color: beige;
+      color:#B0C4DE;
       padding-left:95px;
       border-radius:20px;
       margin-top:20px;
-      background-color: #cd5c5c;
     }
     .vlog-form-input{
       width:700px;
       height:550px;
-      background-color: #cd5c5c;
+     
       margin-left:50px;
       margin-top:20px;
       border-radius: 10px;
       .input-contents{
-        background-color:#cd5c5c;
         width:600px;
         height:80px;
         margin-left:50px;
@@ -213,10 +230,9 @@
         .text-input-label{
           width:200px;
           height:30px;
-          background-color: #cd5c5c;
           font-size: 18px;
           font-family: monospace;
-          color: beige;
+          color:#B0C4DE;
           line-height:30px;
           padding-left:20px;
         }
@@ -240,10 +256,10 @@
         .text-input-label{
           width:200px;
           height:30px;
-          background-color: #cd5c5c;
+      
           font-size: 18px;
           font-family: monospace;
-          color: beige;
+          color:#B0C4DE;
           line-height:30px;
           padding-left:20px;
         }
@@ -256,7 +272,6 @@
       .submit-contents{
         width:250px;
         height:50px;
-        background-color: #cd5c5c;
         margin-left:230px;
         line-height:50px;
         font-size:20px;
@@ -265,10 +280,10 @@
           padding-left:80px;
           .toukou-btn-btn{
             width:100px;
-            background-color: #cd5c5c;
+            background-color: cadetblue;
             font-family: monospace;
             border:none;
-            color: beige;
+            color:#B0C4DE;
           }
         }
       }
@@ -278,7 +293,8 @@
 .create{
   width:100%;
   height:100vh;
-  background-color: beige;
+  background-image: url('/assets/sia.jpg');
+  background-size: 100% 100%;
   position: relative;
   .create-contents{
     width:500px;
@@ -290,11 +306,11 @@
     left:0;
     bottom:100px;
     margin:auto;
-    background-color: #cd5c5c;
+    background-color: azure;
     .top-page-link-btn{
       width:270px;
       height:40px;
-      margin-top:90px;
+      margin-top:60px;
       margin-bottom:20px;
       margin-left:120px;
       border-radius: 8px;
@@ -304,8 +320,8 @@
         padding-left:75px;
         display: block;
         text-decoration: none;
-        color:beige;
-        background-color: #cd5c5c;
+        color:#B0C4DE;
+        height:0;
       }
     }
     .top-vlog-link-btn{
@@ -319,9 +335,26 @@
         padding-left:80px;
         display: block;
         text-decoration: none;
-        color:beige;
-        background-color: #cd5c5c;
+        color:#B0C4DE;
+        height:0;
       }
-    }
+     }
+      .top-my-link-btn{
+        width:270px;
+        height:40px;
+        margin-left:125px;
+        border-radius: 8px;
+        margin-top:20px;
+        .talk-btn-lists{
+          font-size:20px;
+          line-height:40px;
+          padding-left:75px;
+          display: block;
+          text-decoration: none;
+          color:#B0C4DE;
+          height:0;
+        }
+      }
+    
   }
 }
