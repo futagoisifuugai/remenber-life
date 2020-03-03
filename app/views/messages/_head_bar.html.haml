@@ -1,5 +1,5 @@
 .header-list
-  .header-bar
+  .header--bar
     .header-bar-name
       Carve life
     .header-logout-btn
@@ -16,16 +16,6 @@
           = current_user.name
       
     .contents-list
-      .talk-content
-        = icon('fas', 'comment-dots', class: 'talk-icon')
-        = link_to  new_group_path , class: "talk-btn-list" do
-          トーク
-      .group-list-messages
-        - current_user.groups.each do |group|
-          .group
-            = link_to group_messages_path(group) do
-              .group-name
-                = group.name
       .pict-list
         = icon('fas','book', class: 'pict-icon')
         = link_to new_tweet_path , class: "photo-submission " do
@@ -34,9 +24,32 @@
         = icon('fas','book-open', class: 'vlog-icon')
         = link_to tweets_path , class: "photo-submission " do
           ブログ一覧
+      .remenber-pict-new
+        = icon('fas','image', class: 'pict-icon')
+        = link_to new_pict_path , class: "photo-submission " do
+          写真投稿
+      .remenber-pict
+        = icon('fas','images', class: 'remenber-icon')
+        = link_to picts_path , class: "photo-submission " do
+          写真一覧
+      .remenber-pict
+        = icon('fas','user-friends', class: 'remenber-icon')
+        = link_to new_group_path , class: "photo-submission " do
+          グループ作成
+      .talk-content
+        %ul.group__list-name-you
+          = icon('fas','sms', class: 'comment-icon')
+          = link_to "#", class: "group" do
+            グループ
+          - current_user.groups.each do |group|
+            .group-name
+              = link_to group_messages_path(group) do
+                %li.group-name-name
+                  = group.name
 
   .header-right
     .calender-name
+    .calender-main
       #calendar
 
       

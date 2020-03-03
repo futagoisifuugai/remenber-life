@@ -3,7 +3,7 @@
     .flont-list-box-btn
       = link_to  new_group_path , class: "new-group-btn contents" do
         グループ作成
-      = link_to new_tweet_path , class: "pict-tweet-btn contents" do
+      = link_to user_path(current_user.id), class: "pict-tweet-btn contents" do
         ブログ
-      = link_to user_path(current_user.id) , class: "album-list-btn contents" do
-        マイページ
+      = link_to pict_path(current_user.id) , class: "album-list-btn contents" do
+        アルバム

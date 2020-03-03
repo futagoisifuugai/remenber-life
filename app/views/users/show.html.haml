@@ -1,13 +1,14 @@
 .wrapper
   .header-bar
     .header-bar-name
-      Carve life
+      My blog
     .header-logout-btn-lists
       .header-logout-top
         .logout-top-icon-btn
-          = icon('fas', 'user', class: 'blog-user-icon')
+          = icon('fas', 'sign-out-alt', class: 'blog-user-icon')
         .blog-you-name
-          = current_user.name
+          = link_to new_tweet_path , class: "talk-btn-list" do
+            ブログ投稿
       .header-top-page
         .top-icon
           = icon('fas', 'sign-out-alt', class: 'toppage-icon')
