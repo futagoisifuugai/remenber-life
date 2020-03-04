@@ -45,11 +45,13 @@
             .group-name
               = link_to group_messages_path(group) do
                 %li.group-name-name
-                  = group.name
+                  = group.name 
 
   .header-right
     .calender-name
     .calender-main
       #calendar
+        = icon('fas','calendar-alt', class: 'events-icon')
+        = link_to "イベント作成", events_path(@events),class: "event-btn"
 
       
