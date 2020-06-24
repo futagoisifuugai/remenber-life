@@ -1,18 +1,17 @@
-%p#notice= notice
+.events
+  %p
+    %b タイトル:
+    = @event.title
+  %p
+    %b 内容:
+    = @event.description
+  %p
+    %b 始時刻:
+    = @event.start_date
+  %p
+    %b 終時刻:
+    = @event.end_date
 
-%p
-  %b Title:
-  = @event.title
-%p
-  %b Description:
-  = @event.description
-%p
-  %b Start date:
-  = @event.start_date
-%p
-  %b End date:
-  = @event.end_date
-
-= link_to 'Edit', edit_event_path(@event)
-\|
-= link_to 'Back', events_path
+  = link_to '編集', edit_event_path(@event),class:"back"
+  \|
+  = link_to '戻る', events_path,class:"back"

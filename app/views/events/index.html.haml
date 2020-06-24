@@ -1,14 +1,11 @@
 .events
-  %h1 Listing events
+  %h1 イベント表
 
   %table
     %thead
       %tr
-        %th Title
-        %th Description
-        %th Start date
-        %th End date
-        %th
+        %th タイトル
+        %th 内容
         %th
         %th
 
@@ -17,14 +14,12 @@
         %tr
           %td= event.title
           %td= event.description
-          %td= event.start_date
-          %td= event.end_date
-          %td= link_to 'Show', event,class:"events-btn-list"
-          %td= link_to 'Edit', edit_event_path(event),class:"events-btn-list"
-          %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' },class:"events-btn-list"
+          %td= link_to '予定', event,class:"events-btn-list"
+          %td= link_to '編集', edit_event_path(event),class:"events-btn-list"
+          %td= link_to '削除', event, method: :delete, data: { confirm: 'Are you sure?' },class:"events-btn-list"
 
   %br
 
-  = link_to 'New Event', new_event_path,class: "new-events"
+  = link_to 'イベント作成', new_event_path,class: "new-events"
   = link_to root_path , class: "new-events" do
     トップページ
