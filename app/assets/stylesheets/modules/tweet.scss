@@ -3,7 +3,6 @@
   background-size:100% 100%;
 }
 .header-bar{
-  background-color: #f0ffff;
   height:140px;
   width:100%;
   display: flex;
@@ -111,7 +110,6 @@
   height:calc(100vh - 140px);
   display: flex;
   position: relative;
-  background-color: #f0ffff;
   .contents-post-list{
     width:520px;
     height:550px;
@@ -191,7 +189,6 @@
   }
 }
 .tweets-bar{
-  background-color: #f0ffff;
   width:100%;
   height:calc(100% - 140px);
   position: relative;
